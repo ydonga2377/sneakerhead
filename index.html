@@ -386,29 +386,30 @@
         <div class="col-7">
           <div class="map_container">
             <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93150.20950329816!2d-80.35646652692061!3d43.147704233647865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c65e278ea730f%3A0x353da5a5a466f9e0!2sBrantford%2C%20ON!5e0!3m2!1sen!2sca!4v1701990190192!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
         <div class="col-5">
           <form action="#">
             <div>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" id="name" />
+              <label id="errorMessage">*</label>
             </div>
             <div>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" id="email" />
+              <label id="errorMessage1">*</label>
             </div>
             <div>
-              <input type="text" placeholder="Phone" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
+              <input type="text" class="message-box" placeholder="Message" id="messageBox" />
+              <label id="errorMessage2">*</label>
             </div>
             <div class="d-flex ">
-              <button>
+              <button id="send">
                 SEND
               </button>
             </div>
+            <label id="successMessage"></label>
           </form>
         </div>
       </div>
@@ -548,6 +549,7 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   
   <script src="js/custom.js"></script>
+  <script src="js/contact.js"></script>
 
 </body>
 
