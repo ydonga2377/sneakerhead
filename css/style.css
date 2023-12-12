@@ -416,7 +416,6 @@ h2 {
 
 .shop_section .box .img-box img {
   max-width: 100%;
-  max-height: 145px;
 }
 .shop_section .box a {
   color: #000000;
@@ -835,4 +834,25 @@ h5, .h5 {
   text-align: center;
   border-top: 1.5px solid #eeeeee;
   width: 80%;
+}
+.owl-item {
+ 
+}
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
 }
