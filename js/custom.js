@@ -1,41 +1,6 @@
-// to get current year
-function getYear() {
-    var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
-    document.querySelector("#displayYear").innerHTML = currentYear;
-}
-
-getYear();
-
-// owl carousel 
-
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 3
-        },
-        1000: {
-            items: 6
-        }
-    }
-})
-
 $(document).ready(function() {
     // Sample array of products
-    var products = [
-      { name: 'Shoes 1', price: 200, image: '../images/shoe1.png' },
-      { name: 'Shoes 2', price: 70, image: '../images/shoe2.png' },
-      { name: 'Shoes 3', price: 400, image: '../images/shoe3.png' },
-      { name: 'Shoes 4', price: 450, image: '../images/shoe4.png' },
-    ];
+    
 
     // Function to create product elements
     function createProductElement(product) {
@@ -66,4 +31,42 @@ $(document).ready(function() {
     for (var i = 0; i < products.length; i++) {
       $('#productContainer').append(createProductElement(products[i]));
     }
-  });
+    $('#sampleCarousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 4,
+          },
+        },
+      });
+  
+      // Sample data for 4 boxes
+      var sampleData = [
+        { content: 'Box 1' },
+        { content: 'Box 2' },
+        { content: 'Box 3' },
+        { content: 'Box 4' },
+      ];
+  
+      // Loop through the sample data and append them to the Owl Carousel
+      for (var i = 0; i < sampleData.length; i++) {
+        $('#sampleCarousel').trigger('add.owl.carousel', [createBoxElement(sampleData[i])]).trigger('refresh.owl.carousel');
+      }
+  
+      // Function to create box elements
+      function createBoxElement(box) {
+        return `
+          <div class="item">
+            ${box.content}
+          </div>
+        `;
+      }
+    });

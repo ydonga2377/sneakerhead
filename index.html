@@ -18,7 +18,9 @@
   </title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
@@ -131,13 +133,25 @@
         <h2>Latest Products</h2>
       </div>
       <div class="row" id="productContainer">
-        
+        <!-- Product elements will be dynamically added here using jQuery -->
       </div>
       <div class="btn-box">
         <a href="#">View All Products</a>
       </div>
     </div>
   </section>
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Sample Owl Carousel</h2>
+      </div>
+      <!-- Owl Carousel container -->
+      <div class="owl-carousel" id="sampleCarousel"></div>
+    </div>
+  </section>
+
+  
 
   <section class="saving_section ">
     <div class="box">
@@ -440,8 +454,9 @@
   </section>
 
   <script src="js/jquery-3.4.1.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/custom.js"></script>
+  <script src="js/products.js"></script>
 
 </body>
 
