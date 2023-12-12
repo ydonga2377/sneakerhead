@@ -736,6 +736,23 @@ h5, .h5 {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.client_section .owl-theme .owl-nav {
+   margin-top: 0px;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 20px!important;
+  font: inherit;
+  font-size: 28px;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: rgba(0,0,0,.3);
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 40px;
+}
 .info_section {
   position: relative;
   background-color: #2d2d2d;
@@ -855,4 +872,227 @@ h5, .h5 {
   -webkit-backface-visibility: visible;
   transition: opacity .2s ease;
   border-radius: 30px;
+}
+
+/* Add this CSS code to your existing style.css or create a new one */
+
+#product-container {
+  margin-top: 20px;
+}
+
+
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  max-width: 80%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.single-product-block{
+  margin: 20px 0;
+}
+.card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-weight: bold;
+  color: #007bff;
+}
+
+#filter-container {
+  margin-top: 20px;
+}
+
+/* Optional: Add a subtle box shadow to the filter container */
+
+.container-exp{
+  position: relative;
+}
+
+.container-exp .card{
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container-exp .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container-exp .card:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container-exp .card:after{
+  content: 'Shoes';
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    font-size: 5em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,25,0.05);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-exp .card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.container-exp .card:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+    
+}
+
+.container-exp .card .imgBx img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+
+.container-exp .card .contentBx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container-exp .card:hover .contentBx{
+  height: 210px;
+}
+
+.container-exp .card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.container-exp .card .contentBx .size, .container-exp .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container-exp .card:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container-exp .card:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.container-exp .card .contentBx .size h3, .container-exp .card .contentBx .color h3{
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container-exp .card .contentBx .size span{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-exp .card .contentBx .size span:hover{
+  background: #9bdc28;
+}
+
+.container-exp .card .contentBx .color span{
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container-exp .card .contentBx .color span:nth-child(2){
+  background: #9bdc28;
+}
+
+.container-exp .card .contentBx .color span:nth-child(3){
+  background: #03a9f4;
+}
+
+.container-exp .card .contentBx .color span:nth-child(4){
+  background: #e91e63;
+}
+
+.container-exp .card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.container-exp .card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+  
 }

@@ -1,15 +1,26 @@
 $(document).ready(function() {
-    // Sample array of products
+
+    $("#owl-carousel-banner").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: false,
+        navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+    });
+    
     
     $('#productCarousel').owlCarousel({
         loop: true,
         margin: 10,
         responsiveClass: true,
         autoplay:true,
-    autoplayTimeout:3000,
-    autoplayHoverPause:true,
-    nav:true,
-    dots:true,
+        autoplayTimeout:2000,
+        // autoplayHoverPause:true,
+        nav:true,
+        dots:true,
         responsive: {
           0: {
             items: 1,
@@ -52,4 +63,53 @@ $(document).ready(function() {
           </div>
         `;
       }
+
+        displayProducts(products);
+
+      // Handle filter change event
+      $('#price-filter').on('change', function () {
+          filterProducts($(this).val());
+      });
     });
+
+    function displayProducts(products) {
+      var productContainer = $('#product-container');
+  
+      // Clear existing products
+      productContainer.empty();
+  
+      // Loop through products and append HTML
+      $.each(products, function (index, product) {
+        var productHtml = '<div class="col-3 single-product-block">';
+        productHtml += '<div class="container-exp">';
+        productHtml += '<div class="card">';
+        productHtml += '<div class="imgBx">'+'<img src="' + product.image + '">'+'</div>';
+        // productHtml += '<img src="' + product.image + '" class="card-img-top" alt="' + product.name + '">';
+        productHtml += '<div class="contentBx"><h2>' + product.name + '</h2>';
+        // productHtml += '<h5 class="card-title">' + product.name + '</h5>';
+        productHtml += '<p class="card-text">$' + product.price + '</p>';
+        productHtml += '<a href="single-product.html?id=' + product.id + '" class="btn btn-primary">Add to Cart</a>';
+        productHtml += '</div>';
+        productHtml += '</div>';
+        productHtml += '</div>';
+    
+        productContainer.append(productHtml);
+    });
+    
+  }
+  
+  function filterProducts(maxPrice) {
+      var filteredProducts = [];
+  
+      if (maxPrice > 0) {
+          filteredProducts = products.filter(function (product) {
+              return product.price <= maxPrice;
+          });
+      } else {
+          // If maxPrice is 0 (All), display all products
+          filteredProducts = products;
+      }
+  
+      // Display the filtered products
+      displayProducts(filteredProducts);
+  }
