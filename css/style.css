@@ -35,6 +35,11 @@ body {
 .layout_padding-bottom {
   padding-bottom: 90px;
 }
+#errorMessage,#errorMessage1,#errorMessage2,#successMessage
+{
+  color: red;
+  width: auto;
+}
 
 .heading_container {
    
@@ -646,6 +651,7 @@ h5, .h5 {
 }
 .contact_section {
   position: relative;
+  margin-bottom: 90px;
 }
 .contact_section .heading_container {
   margin-bottom: 30px;
@@ -673,7 +679,7 @@ h5, .h5 {
   width: 100%;
   border: 1px solid #919191;
   height: 50px;
-  margin-bottom: 25px;
+  margin-top: 25px;
   padding-left: 25px;
   background-color: transparent;
   outline: none;
@@ -695,6 +701,7 @@ h5, .h5 {
   color: #fff;
   margin: 35px auto 0 auto;
 }
+#send:hover{cursor: pointer;}
 .client_section .heading_container {
   margin-bottom: 20px;
 }
