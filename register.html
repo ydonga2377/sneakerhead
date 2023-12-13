@@ -85,50 +85,17 @@
         </header>
     </div>
 
-    <section>
-        <div class="container border border-info font-weight-bold">
-            <div class="text-center border-bottom">
-                <h2>Registration for Students, Faculties and Admin</h2>
-            </div>
-            <div class="row">
-                <div class="form-group col">
-                    <label for="f_name" class="text-info">First Name:</label>
-                    <input type="text" id="f_name" class="form-control" placeholder="Enter your First Name" required />
-                    <span id="fn_error" class="alert-danger"></span>
-                </div>
-                <div class="form-group col">
-                    <label for="l_name" class="text-info">Last Name:</label>
-                    <input type="text" id="l_name" class="form-control" placeholder="Enter your Last Name" required />
-                    <span id="ln_error" class="alert-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="email" class="text-info">Email:</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter a valid email address"
-                    required />
-                <span id="email_error" class="alert-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="password" class="text-info">Password:</label>
-                <input type="password" id="password" class="form-control" placeholder="Set your new Password"
-                    required />
-                <span id="pass_error" class="alert-danger"></span>
-            </div>
-            <div class="form-group">
-                <label for="c_password" class="text-info">Confirm Password:</label>
-                <input type="password" id="c_password" class="form-control" placeholder="Confirm your Password"
-                    required />
-                <span id="c_pass_error" class="alert-danger"></span>
-            </div>
-            <div class="form-group text-center">
-                <button id="clear" name="clear" class="btn btn-primary" value="Clear Form">Clear Form</button>
-                <input type="submit" id="submit" name="submit" class="btn btn-success" value="Submit">
-            </div>
-            <div class="container-fluid text-center">
-                <p>Already have an account? <a href="login.html">Sign in</a>.</p>
-            </div>
-        </div>
-    </section>
+    <div id="register-form">
+        <form>
+            <h2>Register</h2>
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button type="button" onclick="register()">Register</button>
+        </form>
+    </div>
 
 
     <section class="info_section  layout_padding2-top">
@@ -147,8 +114,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/products.js"></script>
-    <script src="js/register.js"></script>
+    <!-- <script src="js/register.js"></script> -->
+    <script>
+        function register() {
+            var firstName = $("#firstName").val();
+            var lastName = $("#lastName").val();
+            var email = $("#email").val();
+            var password = $("#registerPassword").val();
+            var confirmPassword = $("#confirmPassword").val();
 
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please enter matching passwords.");
+                return;
+            }
+
+            // Retrieve user data from local storage
+            var storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+            // Check if the username already exists
+            var existingUser = storedUsers.find(u => u.username === email);
+
+            if (existingUser) {
+                alert("Email already registered. Please use a different email address.");
+            } else {
+                // Add the new user to the local storage
+                storedUsers.push({ firstName: firstName, lastName: lastName, email: email, password: password });
+                localStorage.setItem("users", JSON.stringify(storedUsers));
+                alert("Registration successful!");
+
+                // Redirect to login page after successful registration
+                window.location.href = "login.html";
+            }
+        }
+    </script>
 </body>
 
 </html>

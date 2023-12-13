@@ -1,117 +1,44 @@
 "use strict"
 
-const $ = selector => document.querySelector(selector);
+$("#submit").click(function () {
+    var firstName = $("#f_name").val();
+    var lastName = $("#l_name").val();
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var confirmPassword = $("#confirm_password").val();
 
-const validForm = () => {
 
-    const firstname = $("#f_name").value;
-    const lastName = $("#l_name").value;
-    const email = $("#email").value;
-    const password = $("#password").value;
-    const confirmPassword = $("#c_password").value;
-    const regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+    if (password !== confirmPassword) {
+        alert("Confirm Password Does not match with password.Please enter the matching password.");
+        return;
+    }
 
-    let isValid = true;
+    var storedUser = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (firstname === "") {
+    var existingUser = storedUser.find(u => u.username === email);
 
-        $("#fn_error").textContent = "First Name is required.";
-        isValid = false;
-
+    if (existingUser) {
+        alert("Email is already registered. Please try with new email address.");
     } else {
-
-        $("#fn_error").textContent = "";
-
+        storedUser.push({ firstName: firstName, lastName: lastName, email: email, password: password });
+        localStorage.setItem("users", JSON.stringify(storedUser));
+        window.location.href = "index.html";
     }
-
-    if (lastName === "") {
-
-        $("#ln_error").textContent = "Last Name is required.";
-        isValid = false;
-
-    } else {
-
-        $("#ln_error").textContent = "";
-
-    }
-
-    if (email === "") {
-
-        $("#email_error").textContent = "Email is required.";
-        isValid = false;
-
-    } else if (!email.match(regex)) {
-
-        $("#email_error").textContent = "Please enter a valid email address like abc@gmail.com";
-        isValid = false;
-
-    } else {
-
-        $("#email_error").textContent = "";
-        localStorage.setItem('username', email);
-
-    }
-
-    if (password === "") {
-
-        $("#pass_error").textContent = "Password is required.";
-        isValid = false;
-
-    } else {
-
-        $("#pass_error").textContent = "";
-
-    }
-
-    if (confirmPassword === "") {
-
-        $("#c_pass_error").textContent = "Confirm Password is required.";
-        isValid = false;
-
-    } else {
-
-        $("#c_pass_error").textContent = "";
-
-    }
-
-    if (password != confirmPassword) {
-
-        $("#c_pass_error").textContent = "Password must match.";
-        isValid = false;
-
-    } else {
-
-        $("#c_pass_error").textContent = "";
-        localStorage.setItem('password', confirmPassword);
-
-    }
-
-    if (isValid) {
-        window.location.href = "login.html";
-    }
-};
+})
 
 const clearForm = () => {
-    // clear user inputs
+
     $("#f_name").value = "";
     $("#l_name").value = "";
     $("#email").value = "";
     $("#password").value = "";
-    $("#c_password").value = "";
+    $("#confirm_password").value = "";
 
     $("#fn_error").textContent = "";
     $("#ln_error").textContent = "";
     $("#email_error").textContent = "";
     $("#pass_error").textContent = "";
-    $("#c_pass_error").textContent = "";
+    $("#confirm_pass_error").textContent = "";
 
     $("#f_name").focus();
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    $("#submit").addEventListener("click", validForm);
-    $("#clear").addEventListener("click", clearForm);
-
-    $("#f_name").focus();
-});
