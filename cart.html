@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <title>
-    Shop | Sneakerhead
+    Cart | Sneakerhead
   </title>
 
    <!-- slider stylesheet -->
@@ -46,7 +46,7 @@
             <li class="nav-item ">
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="shop.html">
                 Shop
               </a>
@@ -72,7 +72,7 @@
                 Login
               </span>
             </a>
-            <a href="cart.html">
+            <a href="">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
             
@@ -86,41 +86,15 @@
   <!-- end hero area -->
 
 
-<section class="shop_section2 layout_padding">
+  <section class="shop_section2 layout_padding">
     <div class="container">
-        <div class="single-product-container">
-            <div class="row">
-                <div class="col-6 product-img">
-                    <img src="" alt="Product Image" id="product-image" class="single-product-image">
-                </div>
-                <div class="col-6">
-                    <div class="single-product-details">
-                        <h2 id="product-name"></h2>
-                        <p id="product-price"></p>
-                        <p id="product-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <div class="quantity-and-cart">
-                            <div class="quantity-container">
-                          
-                          <div class="input-group">
-                              <div class="input-group-prepend">
-                                  <button class="btn btn-outline-secondary" id="decrement-btn"><i class="fa fa-minus"></i></button>
-                              </div>
-                              <input type="number" id="quantity" value="1" min="1" class="form-control">
-                              <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" id="increment-btn"><i class="fa fa-plus"></i></button>
-                              </div>
-                          </div>
-                        </div>
-                        <a href="#" id="add-to-cart-btn" class="btn btn-primary">Add to Cart</a>
-                        </div>
-                        
-                       
-                        
-                    </div>
-                </div>
-            </div>
+        <div id="cart-items" class="container">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="total-section" class="container">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <a href="#" id="clear-cart-btn" class="btn btn-danger">Clear Cart</a>
+            <a href="#" id="checkout-btn" class="btn btn-primary">Proceed to Checkout</a>
         </div>
     </div>
 </section>
@@ -229,45 +203,7 @@
   <script src="js/cart.js"></script>
   <script>
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get('id'));
 
-    const selectedProduct = products.find(product => product.id === productId);
-
-// Update the page content with the selected product details
-if (selectedProduct) {
-    // Set product details on the page
-    $('#product-name').text(selectedProduct.name);
-    $('#product-price').text('$' + selectedProduct.price);
-    $('#product-image').attr('src', selectedProduct.image);
-    $('#product-description').text(selectedProduct.description); // Add description property to your product data
-    
-    $('#decrement-btn').on('click', function () {
-    var quantity = parseInt($('#quantity').val());
-    if (quantity > 1) {
-        $('#quantity').val(quantity - 1);
-    }
-});
-
-$('#increment-btn').on('click', function () {
-    var quantity = parseInt($('#quantity').val());
-    $('#quantity').val(quantity + 1);
-});
-
-// Add to Cart functionality
-$('#add-to-cart-btn').on('click', function () {
-    var quantity = $('#quantity').val();
-
-    // Use addToCart function to add the product to the cart
-    addToCart(selectedProduct, parseInt(quantity));
-
-    // Provide feedback to the user (you can customize this)
-    alert('Product added to cart with quantity: ' + quantity);
-});
-} else {
-    // Handle the case when the product with the specified ID is not found
-    console.log('Product not found.');
-}
 </script>
 
 </body>

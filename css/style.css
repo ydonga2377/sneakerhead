@@ -425,6 +425,7 @@ h2 {
   position: relative;
   padding: 10px;
   margin-top: 25px;
+  border-radius: 20px;
 }
 .shop_section .col-3{
   padding: 0 1%;
@@ -1076,7 +1077,7 @@ h5, .h5 {
   background: #e91e63;
 }
 
-.container-exp .card .contentBx a{
+.container-exp .card .contentBx a.btn{
   display: inline-block;
   padding: 10px 20px;
   background: #fff;
@@ -1091,7 +1092,7 @@ h5, .h5 {
   margin-top: 0;
 }
 
-.container-exp .card:hover .contentBx a{
+.container-exp .card:hover .contentBx a.btn{
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
@@ -1206,4 +1207,75 @@ h5, .h5 {
   border: 2px solid #111;
   transition: 0.5s;
 
+}
+
+.quantity-container {
+  margin-top: 10px;
+}
+
+
+
+#quantity {
+  width: 50px;
+  padding: 5px;
+  font-size: 17px;
+  font-family: 'Poppins';
+}
+
+.input-group {
+  display: flex;
+  max-width: 150px; /* Adjust the width as needed */
+}
+
+#quantity {
+  text-align: center;
+    border: none;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 47px;
+}
+
+#add-to-cart-btn {
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+button#decrement-btn {
+  border: none;
+  background: #fff;
+  padding: 5px;
+  border-left: 2px solid #111;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  height: 47px;
+    background: #ccc;
+    width: 35px;
+    transition: 0.2s;
+}
+button#increment-btn{
+  border: none;
+  background: #fff;
+  padding: 5px;
+  border-right: 2px solid #111;
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  height: 47px;
+    background: #ccc;
+    width: 35px;
+    transition: 0.2s;
+}
+button#decrement-btn:hover, button#increment-btn:hover{
+  background: #111;
+  color: #fff;
+  transition: 0.2s;
+}
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+}
+.quantity-and-cart{
+  display: flex;
 }
