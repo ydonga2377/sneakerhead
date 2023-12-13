@@ -11,7 +11,26 @@ $(document).ready(function() {
         navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
     });
     
-    
+    $('#testimonial-owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots:false,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+          0: {
+              items: 1
+          },
+          600: {
+              items: 1
+          },
+          1000: {
+              items: 2
+          }
+      }
+  })
+
     $('#productCarousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -84,9 +103,8 @@ $(document).ready(function() {
         productHtml += '<div class="container-exp">';
         productHtml += '<div class="card">';
         productHtml += '<div class="imgBx">'+'<img src="' + product.image + '">'+'</div>';
-        // productHtml += '<img src="' + product.image + '" class="card-img-top" alt="' + product.name + '">';
+       
         productHtml += '<div class="contentBx"><h2>' + product.name + '</h2>';
-        // productHtml += '<h5 class="card-title">' + product.name + '</h5>';
         productHtml += '<p class="card-text">$' + product.price + '</p>';
         productHtml += '<a href="single-product.html?id=' + product.id + '" class="btn btn-primary">Add to Cart</a>';
         productHtml += '</div>';

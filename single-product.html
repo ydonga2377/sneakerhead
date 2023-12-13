@@ -85,25 +85,31 @@
   </div>
   <!-- end hero area -->
 
-  <!-- product section -->
-  <section class="shop_section2 layout_padding">
+
+<section class="shop_section2 layout_padding">
     <div class="container">
-      <div class="heading_container heading_center">
-        <h2>Our Products</h2>
-      </div>
-      <div id="filter-container">
-        <label for="price-filter">Filter by Price:</label>
-        <select id="price-filter">
-            <option value="0">All</option>
-            <option value="100">Below $100</option>
-            <option value="200">Below $200</option>
-            <option value="300">Below $300</option>
-            <!-- Add more options based on your product price range -->
-        </select>
+        <div class="single-product-container">
+            <div class="row">
+                <div class="col-6 product-img">
+                    <img src="" alt="Product Image" id="product-image" class="single-product-image">
+                </div>
+                <div class="col-6">
+                    <div class="single-product-details">
+                        <h2 id="product-name"></h2>
+                        <p id="product-price"></p>
+                        <p id="product-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <a href="" id="add-to-cart-btn" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="product-container" class="row"></div>
-    </div>
-  </section>
+</section>
+
+
+
   
 
 
@@ -203,6 +209,27 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/products.js"></script>
+  <script>
+    // Sample product data
+    var product = {
+        id: 001,
+        name: 'Shoes 1',
+        price: 200,
+        image: 'images/shoe1.png'
+        // Add more product details if needed
+    };
+
+    // Set product details on the page
+    $('#product-name').text(product.name);
+    $('#product-price').text('$' + product.price);
+    $('#product-image').attr('src', product.image);
+
+    // Add to Cart functionality
+    $('#add-to-cart-btn').on('click', function () {
+        // Implement your add to cart logic here
+        alert('Product added to cart!');
+    });
+</script>
 
 </body>
 

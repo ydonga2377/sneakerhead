@@ -350,35 +350,39 @@
         <div class="col-7">
           <div class="map_container">
             <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93150.20950329816!2d-80.35646652692061!3d43.147704233647865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c65e278ea730f%3A0x353da5a5a466f9e0!2sBrantford%2C%20ON!5e0!3m2!1sen!2sca!4v1701990190192!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
         <div class="col-5">
           <form action="#">
             <div>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" id="name" />
+              <label id="errorMessage">*</label>
             </div>
             <div>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" id="email" />
+              <label id="errorMessage1">*</label>
             </div>
             <div>
-              <input type="text" placeholder="Phone" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
+              <input type="text" class="message-box" placeholder="Message" id="messageBox" />
+              <label id="errorMessage2">*</label>
             </div>
             <div class="d-flex ">
-              <button>
+              <button id="send">
                 SEND
               </button>
             </div>
+            <label id="successMessage"></label>
           </form>
         </div>
       </div>
     </div>
   </section>
 
+  
+  
+  
   <section class="client_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
@@ -388,40 +392,47 @@
       </div>
     </div>
     <div class="container px-0">
-      <div id="customCarousel2" class="carousel  carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="box">
-              <div class="client_info">
-                <div class="client_name">
-                  <h5>
-                    Morijorch
-                  </h5>
-                  <h6>
-                    Default model text
-                  </h6>
-                </div>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
+      <div class="owl-carousel owl-theme" id="testimonial-owl-carousel">
+        <div class="item">
+          <div class="profile">
+            <div class="profile-content">
+              <p>Sometimes I think the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us.</p>
+              <div class="author">
+                <h5>Nancy </h5>
               </div>
-              <p>
-                editors now 
-              </p>
+            </div>
+            <div class="profile-img">
+              <img src="images/profile3.jpg" alt="sq-sample10"/>
+            </div>
+            
+          </div>
+        </div>
+        <div class="item">
+          <div class="profile">
+            <div class="profile-content">
+              <p>Sometimes I think the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us.</p>
+              <div class="author">
+                <h5>Jackson</h5>
+              </div>
+            </div>
+            <div class="profile-img">
+              <img src="images/profile4.jpg" alt="sq-sample10"/>
             </div>
           </div>
-          
-          
         </div>
-        <div class="carousel_btn-box">
-          <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
-            <i class="fa fa-angle-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
+        <div class="item"><div class="profile">
+          <div class="profile-content">
+            <p>Sometimes I think the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us.</p>
+            <div class="author">
+              <h5>Morgan</h5>
+            </div>
+          </div>
+          <div class="profile-img">
+            <img src="images/profile2.jpg" alt="sq-sample10"/>
+          </div>
+        </div></div>
+        
+    </div>
     </div>
   </section>
 
