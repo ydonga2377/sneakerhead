@@ -1279,3 +1279,88 @@ input::-webkit-outer-spin-button,
 .quantity-and-cart{
   display: flex;
 }
+/* Add this CSS to your existing stylesheet or create a new one */
+
+/* Style for the cart table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style for table header */
+.table th {
+  background-color: #f2f2f2;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Style for table rows */
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style for product image in the table */
+.table img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+/* Style for Remove button */
+.remove-item-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.remove-item-btn:hover {
+  background-color: #c82333;
+}
+
+#total-section{
+  
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add this CSS to your existing stylesheet or create a new one */
+
+/* Style for Clear Cart button */
+#clear-cart-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+#clear-cart-btn:hover {
+  background-color: #c82333;
+}
+
+/* Style for Proceed to Checkout button */
+#checkout-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+#checkout-btn:hover {
+  background-color: #0056b3;
+}
