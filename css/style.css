@@ -1013,6 +1013,7 @@ h5,
   letter-spacing: 1px;
   color: #fff;
   margin: 0;
+  font-size: 25px;
 }
 
 .container-exp .card .contentBx .size,
@@ -1040,6 +1041,11 @@ h5,
   transition-delay: 0.6s;
 }
 
+#aboutusimage{
+  height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
 .container-exp .card .contentBx .size h3,
 .container-exp .card .contentBx .color h3 {
   color: #fff;
