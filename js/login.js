@@ -5,7 +5,6 @@ $("#login").click(function () {
     var password = $("#password").val();
 
     var storedUser = JSON.parse(localStorage.getItem("users")) || [];
-
     var user = storedUser.find(u => u.email === username && u.password === password);
 
     if (user) {

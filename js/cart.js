@@ -5,43 +5,43 @@ var cartItems = [];
 
 // Function to add a product to the cart
 function addToCart(product, quantity) {
-    // Check if the product is already in the cart
-    var existingItem = cartItems.find(item => item.id === product.id);
+  // Check if the product is already in the cart
+  var existingItem = cartItems.find(item => item.id === product.id);
 
-    if (existingItem) {
-        // If the product is already in the cart, update the quantity
-        existingItem.quantity += quantity;
-    } else {
-        // If the product is not in the cart, add it with the specified quantity
-        cartItems.push({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            quantity: quantity,
-            image: product.image
-        });
-    }
+  if (existingItem) {
+    // If the product is already in the cart, update the quantity
+    existingItem.quantity += quantity;
+  } else {
+    // If the product is not in the cart, add it with the specified quantity
+    cartItems.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: quantity,
+      image: product.image
+    });
+  }
 
-    // Save the updated cart to local storage (you can use other storage methods if needed)
-    saveCartToLocalStorage();
+  // Save the updated cart to local storage (you can use other storage methods if needed)
+  saveCartToLocalStorage();
 }
 
 // Function to save the cart to local storage
 function saveCartToLocalStorage() {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
 // Function to retrieve the cart from local storage
 function getCartFromLocalStorage() {
-    var storedCart = localStorage.getItem('cartItems');
-    if (storedCart) {
-        cartItems = JSON.parse(storedCart);
-    }
+  var storedCart = localStorage.getItem('cartItems');
+  if (storedCart) {
+    cartItems = JSON.parse(storedCart);
+  }
 }
 
 // Function to display cart items
 function displayCartItems() {
-    // Your existing displayCartItems function logic here
+  // Your existing displayCartItems function logic here
 }
 
 // Call getCartFromLocalStorage to load cart data when the page loads
@@ -126,8 +126,7 @@ function updateTotalInHTML() {
 
 // Function to handle the checkout button click
 function handleCheckoutClick() {
-  // Implement your checkout logic here
-  alert('Proceeding to checkout. Implement your checkout logic.');
+  window.location.href = "checkout.html";
 }
 
 // Call the displayCartItemsInHTML function to initially display the cart items
