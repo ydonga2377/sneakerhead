@@ -89,75 +89,79 @@
     <div class="container">
       <div class="d-grid">
 
-      
-          
-          <div class="form-checkout">
-            <h3 id="data">Billing Detials</h3>
-            <form class="form-control2">
-              <div>
-                <label for="f_name">First Name</label>
-                <input type="text" id="f_name" required>
-              </div>
-              <div>
-                <label for="l_name">Last Name</label>
-                <input type="text" id="l_name" required>
-              </div>
-              <div>
-                <label for="phone">Phone</label>
-                <input type="number" id="phone" required>
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" required>
-              </div>
-              <div>
-                <label for="address">Street Address</label>
-                <input type="text" id="address" required>
-              </div>
-              <div>
-                <label for="zipcode">Postcode/Zip</label>
-                <input type="text" id="zipcode" required>
-              </div>
-              <button type="submit" id="checkoutToPayment">Proceed to Payment</button>
-              </form>
-          </div>
-          <div class="form-checkout">
-            <h3>Cart Total</h3>
+
+
+        <div class="form-checkout">
+          <h3 id="data">Billing Detials</h3>
+          <form class="form-control2">
             <div>
-              <div>
-                <table id="totalProdcutAmount">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Quantity</th>
-                      <th>Price</th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-              </div>
-              <div>
-                <label><h4>Subtotal</h4></label>
-                <span></span>
-              </div>
-              <div class="d-flex justify-content-space-between">
-                <label>Delivery</label>
-                <span>Free Delivery</span>
-              </div>
-              <div class="d-flex justify-content-space-between">
-                <label><h4>Total</h4></label>
-                <h4>$<span id="totalBillAmout"></span></h4>
-              </div>
+              <label for="f_name">First Name</label>
+              <input type="text" id="f_name" required>
             </div>
-            
+            <div>
+              <label for="l_name">Last Name</label>
+              <input type="text" id="l_name" required>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input type="number" id="phone" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" required>
+            </div>
+            <div>
+              <label for="address">Street Address</label>
+              <input type="text" id="address" required>
+            </div>
+            <div>
+              <label for="zipcode">Postcode/Zip</label>
+              <input type="text" id="zipcode" required>
+            </div>
+            <button type="button" id="checkoutToPayment">Proceed to Payment</button>
+          </form>
+        </div>
+        <div class="form-checkout">
+          <h3>Cart Total</h3>
+          <div>
+            <div>
+              <table id="totalProdcutAmount">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+            <div>
+              <label>
+                <h4>Subtotal</h4>
+              </label>
+              <span></span>
+            </div>
+            <div class="d-flex justify-content-space-between">
+              <label>Delivery</label>
+              <span>Free Delivery</span>
+            </div>
+            <div class="d-flex justify-content-space-between">
+              <label>
+                <h4>Total</h4>
+              </label>
+              <h4>$<span id="totalBillAmout"></span></h4>
+            </div>
           </div>
 
-        </div> 
+        </div>
+
+      </div>
     </div>
   </section>
 
 
-  
+
 
 
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -174,26 +178,3 @@
 </body>
 
 </html>
-
-<!-- <div>
-          <label for="country">Country</label>
-          <select name="country" id="country">
-            <option value="">India</option>
-            <option value="">Canada</option>
-            <option value="">USA</option>
-          </select>
-        </div>
-        <div>
-          <label for="state">State</label>
-          <select name="state" id="state">
-            <option value="">Ontario</option>
-            <option value="">Alberta</option>
-          </select>
-        </div>
-        <div>
-          <label for="city">City</label>
-          <select name="state" id="state">
-            <option value="">Brantford</option>
-            <option value="">Hamilton</option>
-          </select>
-        </div> -->

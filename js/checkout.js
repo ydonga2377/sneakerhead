@@ -10,20 +10,23 @@ $(document).ready(function () {
     var address = $("#address").val();
     var zipcode = $("#zipcode").val();
 
-    if (!firstName || !lastName || !phone || !email || !address || !zipcode) {
+    if (!firstName && !lastName && !phone && !email && !address && !zipcode) {
       alert("Please fill in all required fields");
-    }
-    var userData = {
-      firstName: firstName,
-      lastName: lastName,
-      phone: phone,
-      email: email,
-      address: address,
-      zipcode: zipcode
-    }
-    localStorage.setItem("billingDetails", JSON.stringify(userData));
+    } else {
+      var userData = {
+        firstName: firstName,
+        lastName: lastName,
+        phone: phone,
+        email: email,
+        address: address,
+        zipcode: zipcode
+      }
+      localStorage.setItem("billingDetails", JSON.stringify(userData));
 
-    alert("Checkout successfull! User data has been stored");
+      alert("Checkout successfull! User data has been stored");
+      window.location.href = "thankyou.html"
+    }
+
   })
 
   var storedCartItemData = JSON.parse(localStorage.getItem("cartItems")) || [];
