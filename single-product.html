@@ -17,14 +17,15 @@
     Shop | Sneakerhead
   </title>
 
-   <!-- slider stylesheet -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-   
-   <!-- Custom styles for this template -->
-   <link href="css/style.css" rel="stylesheet" />
-   <!-- responsive style -->
-   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -37,7 +38,8 @@
             Sneakerhead
           </span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""></span>
         </button>
 
@@ -75,7 +77,7 @@
             <a href="cart.html">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
-            
+
           </div>
         </div>
       </nav>
@@ -86,52 +88,53 @@
   <!-- end hero area -->
 
 
-<section class="shop_section2 layout_padding">
+  <section class="shop_section2 layout_padding">
     <div class="container">
-        <div class="single-product-container">
-            <div class="row">
-                <div class="col-6 product-img">
-                    <img src="" alt="Product Image" id="product-image" class="single-product-image">
-                </div>
-                <div class="col-6">
-                    <div class="single-product-details">
-                        <h2 id="product-name"></h2>
-                        <p id="product-price"></p>
-                        <p id="product-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <div class="quantity-and-cart">
-                            <div class="quantity-container">
-                          
-                          <div class="input-group">
-                              <div class="input-group-prepend">
-                                  <button class="btn btn-outline-secondary" id="decrement-btn"><i class="fa fa-minus"></i></button>
-                              </div>
-                              <input type="number" id="quantity" value="1" min="1" class="form-control">
-                              <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" id="increment-btn"><i class="fa fa-plus"></i></button>
-                              </div>
-                          </div>
-                        </div>
-                        <a href="#" id="add-to-cart-btn" class="btn btn-primary">Add to Cart</a>
-                        </div>
-                        
-                       
-                        
+      <div class="single-product-container">
+        <div class="row">
+          <div class="col-6 product-img">
+            <img src="" alt="Product Image" id="product-image" class="single-product-image">
+          </div>
+          <div class="col-6">
+            <div class="single-product-details">
+              <h2 id="product-name"></h2>
+              <p id="product-price"></p>
+              <p id="product-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+              <div class="quantity-and-cart">
+                <div class="quantity-container">
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-secondary" id="decrement-btn"><i class="fa fa-minus"></i></button>
                     </div>
+                    <input type="number" id="quantity" value="1" min="1" class="form-control">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" id="increment-btn"><i class="fa fa-plus"></i></button>
+                    </div>
+                  </div>
                 </div>
+                <a href="#" id="add-to-cart-btn" class="btn btn-primary">Add to Cart</a>
+              </div>
+
+
+
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
 
-  
 
 
-  
-  
+
+
+
   <!-- end product section -->
 
   <!-- info section -->
@@ -161,7 +164,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum 
+              Lorem ipsum
             </p>
           </div>
           <div class="col-3">
@@ -182,7 +185,8 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed doLorem ipsum dolor sit amet,
             </p>
           </div>
           <div class="col-3">
@@ -234,41 +238,42 @@
 
     const selectedProduct = products.find(product => product.id === productId);
 
-// Update the page content with the selected product details
-if (selectedProduct) {
-    // Set product details on the page
-    $('#product-name').text(selectedProduct.name);
-    $('#product-price').text('$' + selectedProduct.price);
-    $('#product-image').attr('src', selectedProduct.image);
-    $('#product-description').text(selectedProduct.description); // Add description property to your product data
-    
-    $('#decrement-btn').on('click', function () {
-    var quantity = parseInt($('#quantity').val());
-    if (quantity > 1) {
-        $('#quantity').val(quantity - 1);
+    // Update the page content with the selected product details
+    if (selectedProduct) {
+      // Set product details on the page
+      $('#product-name').text(selectedProduct.name);
+      $('#product-price').text('$' + selectedProduct.price);
+      $('#product-image').attr('src', selectedProduct.image);
+      $('#product-description').text(selectedProduct.description); // Add description property to your product data
+
+      $('#decrement-btn').on('click', function () {
+        var quantity = parseInt($('#quantity').val());
+        if (quantity > 1) {
+          $('#quantity').val(quantity - 1);
+        }
+      });
+
+      $('#increment-btn').on('click', function () {
+        var quantity = parseInt($('#quantity').val());
+        $('#quantity').val(quantity + 1);
+      });
+
+      // Add to Cart functionality
+      $('#add-to-cart-btn').on('click', function () {
+        var quantity = $('#quantity').val();
+
+        // Use addToCart function to add the product to the cart
+        addToCart(selectedProduct, parseInt(quantity));
+
+        // Provide feedback to the user (you can customize this)
+        alert('Product added to cart with quantity: ' + quantity);
+        window.location.href = 'cart.html';
+      });
+    } else {
+      // Handle the case when the product with the specified ID is not found
+      console.log('Product not found.');
     }
-});
-
-$('#increment-btn').on('click', function () {
-    var quantity = parseInt($('#quantity').val());
-    $('#quantity').val(quantity + 1);
-});
-
-// Add to Cart functionality
-$('#add-to-cart-btn').on('click', function () {
-    var quantity = $('#quantity').val();
-
-    // Use addToCart function to add the product to the cart
-    addToCart(selectedProduct, parseInt(quantity));
-
-    // Provide feedback to the user (you can customize this)
-    alert('Product added to cart with quantity: ' + quantity);
-});
-} else {
-    // Handle the case when the product with the specified ID is not found
-    console.log('Product not found.');
-}
-</script>
+  </script>
 
 </body>
 
