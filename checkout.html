@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <title>
-    Cart | Sneakerhead
+    Checkout | Sneakerhead
   </title>
 
   <!-- slider stylesheet -->
@@ -54,8 +54,8 @@
               </a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="why.html">
-                Why Us
+              <a class="nav-link" href="about.html">
+                About
               </a>
             </li>
             <li class="nav-item">
@@ -68,13 +68,13 @@
             </li>
           </ul>
           <div class="user_option">
-            <a href="">
+            <a href="login.html">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span>
                 Login
               </span>
             </a>
-            <a href="">
+            <a href="cart.html">
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
 
@@ -85,65 +85,79 @@
     <!-- end header section -->
   </div>
 
-  <div>
-    <div>
-      <h3 id="data">Billing Detials</h3>
-      <form class="form-control">
-        <div>
-          <label for="f_name">First Name</label>
-          <input type="text" id="f_name" required>
-        </div>
-        <div>
-          <label for="l_name">Last Name</label>
-          <input type="text" id="l_name" required>
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input type="number" id="phone" required>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
-        </div>
-        <div>
-          <label for="address">Street Address</label>
-          <input type="text" id="address" required>
-        </div>
-        <div>
-          <label for="zipcode">Postcode/Zip</label>
-          <input type="text" id="zipcode" required>
-        </div>
-        <h4>CART TOTAL</h4>
-        <div>
-          <div>
-            <table id="totalProdcutAmount">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
+  <section class="shop_section2 layout_padding">
+    <div class="container">
+      <div class="d-grid">
+
+      
+          
+          <div class="form-checkout">
+            <h3 id="data">Billing Detials</h3>
+            <form class="form-control2">
+              <div>
+                <label for="f_name">First Name</label>
+                <input type="text" id="f_name" required>
+              </div>
+              <div>
+                <label for="l_name">Last Name</label>
+                <input type="text" id="l_name" required>
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input type="number" id="phone" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+              </div>
+              <div>
+                <label for="address">Street Address</label>
+                <input type="text" id="address" required>
+              </div>
+              <div>
+                <label for="zipcode">Postcode/Zip</label>
+                <input type="text" id="zipcode" required>
+              </div>
+              <button type="submit" id="checkoutToPayment">Proceed to Payment</button>
+              </form>
           </div>
-          <div>
-            <label>SubTotal</label>
-            <span></span>
+          <div class="form-checkout">
+            <h3>Cart Total</h3>
+            <div>
+              <div>
+                <table id="totalProdcutAmount">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div>
+                <label><h4>Subtotal</h4></label>
+                <span></span>
+              </div>
+              <div class="d-flex justify-content-space-between">
+                <label>Delivery</label>
+                <span>Free Delivery</span>
+              </div>
+              <div class="d-flex justify-content-space-between">
+                <label><h4>Total</h4></label>
+                <h4>$<span id="totalBillAmout"></span></h4>
+              </div>
+            </div>
+            
           </div>
-          <div>
-            <label>Delivery</label>
-            <span>Free Delivery</span>
-          </div>
-          <div>
-            <label>TOTAL</label>
-            <span id="totalBillAmout">$</span>
-          </div>
-        </div>
-        <button type="submit" id="checkoutToPayment">Proceed to Payment</button>
-      </form>
+
+        </div> 
     </div>
-  </div>
+  </section>
+
+
+  
 
 
   <script src="js/jquery-3.4.1.min.js"></script>

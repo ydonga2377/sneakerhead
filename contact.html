@@ -14,13 +14,12 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <title>
-    Shop | Sneakerhead
+    Contact Us| Sneakerhead
   </title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
@@ -38,8 +37,7 @@
             Sneakerhead
           </span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""></span>
         </button>
 
@@ -48,12 +46,12 @@
             <li class="nav-item ">
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="shop.html">
                 Shop
               </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link" href="about.html">
                 About
               </a>
@@ -63,7 +61,7 @@
                 Testimonial
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
           </ul>
@@ -87,55 +85,52 @@
   </div>
   <!-- end hero area -->
 
+  <!-- contact us section -->
 
-  <section class="shop_section2 layout_padding">
-    <div class="container">
-      <div class="single-product-container">
-        <div class="row">
-          <div class="col-6 product-img">
-            <img src="" alt="Product Image" id="product-image" class="single-product-image">
-          </div>
-          <div class="col-6">
-            <div class="single-product-details">
-              <h2 id="product-name"></h2>
-              <p id="product-price"></p>
-              <p id="product-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
-              <div class="quantity-and-cart">
-                <div class="quantity-container">
-
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <button class="btn btn-outline-secondary" id="decrement-btn"><i class="fa fa-minus"></i></button>
-                    </div>
-                    <input type="number" id="quantity" value="1" min="1" class="form-control">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" id="increment-btn"><i class="fa fa-plus"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" id="add-to-cart-btn" class="btn btn-primary">Add to Cart</a>
-              </div>
-
-
-
+  <section class="contact_section ">
+    <div class="container px-0">
+      <div class="heading_container ">
+        <h3 class="">
+          Contact Us
+        </h3>
+      </div>
+    </div>
+    <div class="container container-bg">
+      <div class="row">
+        <div class="col-7">
+          <div class="map_container">
+            <div class="map-responsive">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93150.20950329816!2d-80.35646652692061!3d43.147704233647865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c65e278ea730f%3A0x353da5a5a466f9e0!2sBrantford%2C%20ON!5e0!3m2!1sen!2sca!4v1701990190192!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
+        </div>
+        <div class="col-5">
+          <form action="#">
+            <div>
+              <input type="text" placeholder="Name" id="name" />
+              <label id="errorMessage">*</label>
+            </div>
+            <div>
+              <input type="email" placeholder="Email" id="email" />
+              <label id="errorMessage1">*</label>
+            </div>
+            <div>
+              <input type="text" class="message-box" placeholder="Message" id="messageBox" />
+              <label id="errorMessage2">*</label>
+            </div>
+            <div class="d-flex ">
+              <button id="send">
+                SEND
+              </button>
+            </div>            
+            <label id="successMessage"></label>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
-
-  <!-- end product section -->
+  <!-- end contact us section -->
 
   <!-- info section -->
 
@@ -164,7 +159,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum
+              Lorem ipsum 
             </p>
           </div>
           <div class="col-3">
@@ -185,8 +180,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed doLorem ipsum dolor sit amet,
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
             </p>
           </div>
           <div class="col-3">
@@ -227,53 +221,8 @@
 
 
   <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/cart.js"></script>
-  <script>
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get('id'));
-
-    const selectedProduct = products.find(product => product.id === productId);
-
-    // Update the page content with the selected product details
-    if (selectedProduct) {
-      // Set product details on the page
-      $('#product-name').text(selectedProduct.name);
-      $('#product-price').text('$' + selectedProduct.price);
-      $('#product-image').attr('src', selectedProduct.image);
-      $('#product-description').text(selectedProduct.description); // Add description property to your product data
-
-      $('#decrement-btn').on('click', function () {
-        var quantity = parseInt($('#quantity').val());
-        if (quantity > 1) {
-          $('#quantity').val(quantity - 1);
-        }
-      });
-
-      $('#increment-btn').on('click', function () {
-        var quantity = parseInt($('#quantity').val());
-        $('#quantity').val(quantity + 1);
-      });
-
-      // Add to Cart functionality
-      $('#add-to-cart-btn').on('click', function () {
-        var quantity = $('#quantity').val();
-
-        // Use addToCart function to add the product to the cart
-        addToCart(selectedProduct, parseInt(quantity));
-
-        // Provide feedback to the user (you can customize this)
-        alert('Product added to cart with quantity: ' + quantity);
-        window.location.href = 'cart.html';
-      });
-    } else {
-      // Handle the case when the product with the specified ID is not found
-      console.log('Product not found.');
-    }
-  </script>
+  
+  <script src="js/contact.js"></script>
 
 </body>
 

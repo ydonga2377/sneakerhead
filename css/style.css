@@ -903,7 +903,7 @@ h5, .h5 {
 
 .card-text {
   font-weight: bold;
-  color: #007bff;
+  color: #ccc;
 }
 
 #filter-container {
@@ -932,9 +932,10 @@ h5, .h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #9bdc28;
+  background: #f89cab;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
+  filter: grayscale(1);
 }
 
 .container-exp .card:hover:before{
@@ -950,11 +951,12 @@ h5, .h5 {
     font-size: 5em;
     font-weight: 800;
     font-style: italic;
-    color: rgba(255,255,25,0.05);
+    color: rgb(247 155 170 / 11%);
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: grayscale(1);
 }
 
 
@@ -1331,7 +1333,7 @@ input::-webkit-outer-spin-button,
 /* Add this CSS to your existing stylesheet or create a new one */
 
 /* Style for Clear Cart button */
-#clear-cart-btn {
+#clear-cart-btn, #cancel {
   background-color: #dc3545;
   color: #fff;
   border: none;
@@ -1344,12 +1346,12 @@ input::-webkit-outer-spin-button,
   border-radius: 5px;
 }
 
-#clear-cart-btn:hover {
+#clear-cart-btn:hover ,#cancel:hover{
   background-color: #c82333;
 }
 
 /* Style for Proceed to Checkout button */
-#checkout-btn {
+#checkout-btn ,#checkoutToPayment, #login,#register-btn{
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -1361,6 +1363,147 @@ input::-webkit-outer-spin-button,
   border-radius: 5px;
 }
 
-#checkout-btn:hover {
+#checkout-btn:hover ,#checkoutToPayment:hover, #login:hover,#register-btn:hover{
   background-color: #0056b3;
+}
+
+.form-checkout {
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-control2 label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+.form-control2 input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.d-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.order-summary {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.form-checkout table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.form-checkout th, .form-checkout td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.order-details {
+  flex-basis: 30%;
+}
+
+.subtotal,
+.delivery,
+.total {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+.justify-content-space-between{
+  justify-content:space-between;
+}
+
+
+.shop_section2 {
+  padding: 20px;
+}
+
+.container {
+  max-width: 100%;
+}
+
+
+
+.w-25 {
+  width: 40% !important;
+}
+
+.shadow {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.rounded {
+  border-radius: .2rem !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.text-info {
+  color: #1b1b1b !important;
+}
+.login .form-group{
+  margin: 20px;
+  text-align: center;
+}
+
+.login input {
+ width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.justify-content-end{
+  justify-content: end;
 }

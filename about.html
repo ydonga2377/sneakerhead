@@ -14,13 +14,12 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <title>
-    Shop | Sneakerhead
+    Why Us | Sneakerhead
   </title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
@@ -38,8 +37,7 @@
             Sneakerhead
           </span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""></span>
         </button>
 
@@ -48,12 +46,12 @@
             <li class="nav-item ">
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="shop.html">
                 Shop
               </a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item active">
               <a class="nav-link" href="about.html">
                 About
               </a>
@@ -87,55 +85,41 @@
   </div>
   <!-- end hero area -->
 
+  <!-- About us section -->
 
-  <section class="shop_section2 layout_padding">
-    <div class="container">
-      <div class="single-product-container">
-        <div class="row">
-          <div class="col-6 product-img">
-            <img src="" alt="Product Image" id="product-image" class="single-product-image">
-          </div>
-          <div class="col-6">
-            <div class="single-product-details">
-              <h2 id="product-name"></h2>
-              <p id="product-price"></p>
-              <p id="product-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-              </p>
-              <div class="quantity-and-cart">
-                <div class="quantity-container">
-
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <button class="btn btn-outline-secondary" id="decrement-btn"><i class="fa fa-minus"></i></button>
-                    </div>
-                    <input type="number" id="quantity" value="1" min="1" class="form-control">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-secondary" id="increment-btn"><i class="fa fa-plus"></i></button>
-                    </div>
-                  </div>
-                </div>
-                <a href="#" id="add-to-cart-btn" class="btn btn-primary">Add to Cart</a>
-              </div>
-
-
-
+  <section class="contact_section ">
+    <div class="container px-0">
+      <div class="heading_container ">
+        <h2 class="">
+          About Us
+        </h2>
+      </div>
+    </div>
+    <div class="container container-bg">
+      <div class="row">
+        <div class="col-7">
+          <div class="map_container">
+            <div class="map-responsive">
+                <img src="images/about us.jpg" id="aboutusimage">
             </div>
           </div>
+        </div>
+        <div class="col-5">
+          <form action="#">
+            <div>
+              <h1>About Sneakerhead</h1>
+              <p>Welcome to Sneakerhead, where passion meets style in every step. Born out of a shared love for sneakers and a commitment to providing the latest trends, we are more than just a shoe company; we are a community of sneaker enthusiasts dedicated to helping you express your unique style.</p>
+              <h1>Our Mission</h1>  
+              <p>Our mission is to be more than just a shoe retailer; we aspire to be your go-to source for all things sneakers. We strive to curate a collection that not only reflects the latest trends but also pays homage to the rich history and cultural significance of sneakers. We are committed to delivering a seamless shopping experience and exceptional customer service to every member of the Sneakerhead community.</p>
+            </div>            
+            <label id="successMessage"></label>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
-
-  <!-- end product section -->
+  <!-- end About us section -->
 
   <!-- info section -->
 
@@ -164,7 +148,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum
+              Lorem ipsum 
             </p>
           </div>
           <div class="col-3">
@@ -185,8 +169,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed doLorem ipsum dolor sit amet,
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
             </p>
           </div>
           <div class="col-3">
@@ -227,53 +210,8 @@
 
 
   <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="js/products.js"></script>
-  <script src="js/cart.js"></script>
-  <script>
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get('id'));
-
-    const selectedProduct = products.find(product => product.id === productId);
-
-    // Update the page content with the selected product details
-    if (selectedProduct) {
-      // Set product details on the page
-      $('#product-name').text(selectedProduct.name);
-      $('#product-price').text('$' + selectedProduct.price);
-      $('#product-image').attr('src', selectedProduct.image);
-      $('#product-description').text(selectedProduct.description); // Add description property to your product data
-
-      $('#decrement-btn').on('click', function () {
-        var quantity = parseInt($('#quantity').val());
-        if (quantity > 1) {
-          $('#quantity').val(quantity - 1);
-        }
-      });
-
-      $('#increment-btn').on('click', function () {
-        var quantity = parseInt($('#quantity').val());
-        $('#quantity').val(quantity + 1);
-      });
-
-      // Add to Cart functionality
-      $('#add-to-cart-btn').on('click', function () {
-        var quantity = $('#quantity').val();
-
-        // Use addToCart function to add the product to the cart
-        addToCart(selectedProduct, parseInt(quantity));
-
-        // Provide feedback to the user (you can customize this)
-        alert('Product added to cart with quantity: ' + quantity);
-        window.location.href = 'cart.html';
-      });
-    } else {
-      // Handle the case when the product with the specified ID is not found
-      console.log('Product not found.');
-    }
-  </script>
+  
+  <script src="js/contact.js"></script>
 
 </body>
 
