@@ -50,7 +50,7 @@ getCartFromLocalStorage();
 
 // ... (your existing code)
 
-// Function to display cart items in the HTML
+// Function to display cart items in the HTML as a table
 function displayCartItemsInHTML() {
   // Get the cart items container
   var cartItemsContainer = document.getElementById('cart-items');
@@ -63,21 +63,41 @@ function displayCartItemsInHTML() {
     // Display a message for an empty cart
     cartItemsContainer.innerHTML = '<p>No items in the cart</p>';
   } else {
-    // Loop through the cart items and generate HTML for each item
+    // Create a table
+    var table = document.createElement('table');
+    table.className = 'table';
+
+    // Create the table header
+    var headerRow = table.createTHead().insertRow(0);
+    headerRow.innerHTML = '<th>Product</th><th>Price</th><th>Quantity</th><th>Remove</th>';
+
+    // Loop through the cart items and generate table rows for each item
     cartItems.forEach((item, index) => {
-      var cartItemHTML = `
-          <div class="cart-item">
-              <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-              <div class="cart-item-details">
-                  <h4>${item.name}</h4>
-                  <p>Price: $${item.price}</p>
-                  <p>Quantity: ${item.quantity}</p>
-                  <button class="remove-item-btn" data-index="${index}">Remove</button>
-              </div>
-          </div>
-      `;
-      cartItemsContainer.innerHTML += cartItemHTML;
+      var row = table.insertRow(-1);
+
+      // Product column
+      var productCell = row.insertCell(0);
+      productCell.innerHTML = `<img src="${item.image}" alt="${item.name}" class="cart-item-image"><p>${item.name}</p>`;
+
+      // Price column
+      var priceCell = row.insertCell(1);
+      priceCell.innerText = `$${item.price}`;
+
+      // Quantity column
+      var quantityCell = row.insertCell(2);
+      quantityCell.innerText = item.quantity;
+
+      // Remove button column
+      var removeCell = row.insertCell(3);
+      var removeButton = document.createElement('button');
+      removeButton.className = 'btn btn-danger remove-item-btn';
+      removeButton.setAttribute('data-index', index);
+      removeButton.innerText = 'Remove';
+      removeCell.appendChild(removeButton);
     });
+
+    // Append the table to the container
+    cartItemsContainer.appendChild(table);
   }
 
   // Update the total in the HTML
@@ -89,6 +109,7 @@ function displayCartItemsInHTML() {
     removeButtons[i].addEventListener('click', handleRemoveItemClick);
   }
 }
+
 
 // Function to handle the click on the "Remove" button
 function handleRemoveItemClick(event) {
@@ -121,7 +142,7 @@ function updateTotalInHTML() {
   totalSpan.innerText = total.toFixed(2);
 
   // Show or hide the total section based on whether there are items in the cart
-  totalContainer.style.display = cartItems.length > 0 ? 'block' : 'none';
+  totalContainer.style.display = cartItems.length > 0 ? 'flex' : 'none';
 }
 
 // Function to handle the checkout button click
