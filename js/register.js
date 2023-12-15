@@ -1,6 +1,6 @@
 "use strict"
 
-$("#submit").click(function () {
+$("#register-btn").click(function () {
     var firstName = $("#f_name").val();
     var lastName = $("#l_name").val();
     var email = $("#email").val();
@@ -16,10 +16,10 @@ $("#submit").click(function () {
     var storedUser = JSON.parse(localStorage.getItem("users")) || [];
 
     var existingUser = storedUser.find(u => u.username === email);
-
+    
     if (existingUser) {
         alert("Email is already registered. Please try with new email address.");
-    } else {
+    }else {
         storedUser.push({ firstName: firstName, lastName: lastName, email: email, password: password });
         localStorage.setItem("users", JSON.stringify(storedUser));
         window.location.href = "index.html";

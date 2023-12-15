@@ -48,7 +48,7 @@ function displayCartItems() {
 getCartFromLocalStorage();
 // cart.js
 
-// ... (your existing code)
+  
 
 // Function to display cart items in the HTML as a table
 function displayCartItemsInHTML() {
@@ -125,7 +125,7 @@ function handleRemoveItemClick(event) {
   saveCartToLocalStorage();
 }
 
-// ... (your existing code)
+  
 
 
 
@@ -158,7 +158,7 @@ document.getElementById('checkout-btn').addEventListener('click', handleCheckout
 
 // cart.js
 
-// ... (your existing code)
+  
 
 function handleClearCartClick() {
   // Clear cart items
