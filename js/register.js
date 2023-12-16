@@ -16,19 +16,21 @@ $("#register-btn").click(function () {
     var confirmPassword = $("#confirmPassword").val();
 
     var nameRegex = /^[a-zA-Z]+$/;
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var emailRegex = /^[^\s@=:><]+@[^\s@=:><]+\.[^\s@=:><]+$/;
+
     var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{5,}$/;
 
-    if (!firstName && !nameRegex.test(firstName)) {
+    if (!firstName || !nameRegex.test(firstName)) {
         $("#firstName + span").text("Please enter your First name and it should only contain char.");
     }
 
-    if (!lastName && !nameRegex.test(lastName)) {
+    if (!lastName || !nameRegex.test(lastName)) {
         $("#lastName + span").text("Please enter your Last name and it should only contain char.");
     }
 
-    if (!email && !emailRegex.test(email)) {
+    if (!email || !emailRegex.test(email)) {
         $("#email + span").text("Please enter valid email address.(ex: youremail@gmail.com)");
+        return;
     }
 
     if (!passwordRegex.test(password)) {
