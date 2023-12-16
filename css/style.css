@@ -1041,10 +1041,10 @@ h5,
   transition-delay: 0.6s;
 }
 
-#aboutusimage{
+#aboutusimage {
   height: 100%;
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 .container-exp .card .contentBx .size h3,
 .container-exp .card .contentBx .color h3 {
@@ -1502,6 +1502,8 @@ input::-webkit-inner-spin-button {
 
 .text-info {
   color: #1b1b1b !important;
+  display: block;
+  text-align: left;
 }
 .login .form-group {
   margin: 20px;
@@ -1600,6 +1602,23 @@ input::-webkit-inner-spin-button {
   text-align: right;
   font-weight: 400;
 }
-.why_section{
+.why_section {
   padding-bottom: 0px;
+}
+
+#register-form .form-group {
+  margin: 0 0 20px;
+}
+
+#register-form .form-group input {
+  margin-bottom: 0;
+}
+
+#register-form .form-group span {
+  font-size: 12px;
+  color: red;
+  text-align: left;
+  display: block;
+  margin-top: 2px;
+  letter-spacing: -0.1px;
 }
